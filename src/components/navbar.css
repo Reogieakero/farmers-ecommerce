@@ -1,0 +1,148 @@
+/* Navbar Container */
+.navbar {
+  background: white;
+  border-bottom: 2px solid green;
+  padding: 12px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 20px;
+  font-weight: bold;
+  color: green;
+}
+
+.logo-icon {
+  background: #00a651;
+  color: white;
+  padding: 6px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+}
+
+/* Menu */
+.menu {
+  display: flex;
+  gap: 50px;
+  list-style: none;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: #222;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.menu li a:hover {
+  color: green;
+}
+
+/* Right Section */
+.right-section {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Cart */
+.cart-icon {
+  font-size: 18px;
+  color: #333;
+  cursor: pointer;
+}
+
+/* Buttons */
+.login-btn,
+.signup-btn {
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  border: 2px solid transparent;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+/* Login (outline) */
+.login-btn {
+  border: 2px solid green;
+  color: green;
+  background: white;
+}
+
+.login-btn:hover {
+  background: #f5fff5;
+}
+
+/* Sign Up (solid) */
+.signup-btn {
+  background: green;
+  color: white;
+  border: 2px solid green;
+}
+
+.signup-btn:hover {
+  background: darkgreen;
+}
+
+/* Mobile */
+.menu-toggle {
+  display: none;
+  font-size: 22px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.mobile-menu {
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  background: white;
+  border-top: 1px solid #ddd;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.mobile-menu a {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+}
+
+.mobile-menu a:hover {
+  color: green;
+}
+
+.mobile-auth {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .menu, .right-section {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
