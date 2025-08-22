@@ -1,20 +1,18 @@
 import { useState } from "react";
 import "./navbar.css";
-import { FaShoppingCart, FaUser } from "react-icons/fa"; // for cart & user icon
-import { FaLeaf } from "react-icons/fa"; // for logo icon
+import { FaShoppingCart, FaUser } from "react-icons/fa"; 
+import { FaLeaf } from "react-icons/fa"; 
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <nav className="navbar">
-      {/* Logo */}
       <div className="logo">
         <span className="logo-icon"><FaLeaf /></span>
         <span className="logo-text">FarmFresh</span>
       </div>
 
-      {/* Desktop Menu */}
       <ul className="menu">
         <li><a href="#">Home</a></li>
         <li><a href="#">Products</a></li>
@@ -24,7 +22,6 @@ export default function Navbar() {
         <li><a href="#">Contact</a></li>
       </ul>
 
-      {/* Cart + Auth */}
       <div className="right-section">
         <FaShoppingCart className="cart-icon" />
 
@@ -37,12 +34,10 @@ export default function Navbar() {
         </button>
       </div>
 
-      {/* Mobile Toggle */}
       <button className="menu-toggle" onClick={() => setIsOpen(!isOpen)}>
         ☰
       </button>
 
-      {/* Mobile Dropdown */}
       {isOpen && (
         <div className="mobile-menu">
           <a href="#">Home</a>

@@ -4,7 +4,6 @@ import "./heroSection.css";
 export function HeroSection() {
   return (
     <section className="hero-section">
-      {/* Background Pattern */}
       <div className="hero-bg">
         <div className="circle circle-1"></div>
         <div className="circle circle-2"></div>
@@ -12,15 +11,12 @@ export function HeroSection() {
 
       <div className="hero-container">
         <div className="hero-grid">
-          {/* Left Content */}
           <div className="hero-left">
-            {/* Badge */}
             <div className="badge">
               <Leaf size={16} />
               100% Organic & Fresh
             </div>
 
-            {/* Main Heading */}
             <div className="hero-heading">
               <h1>
                 Fresh from <span>Farm to Table</span>
@@ -31,7 +27,6 @@ export function HeroSection() {
               </p>
             </div>
 
-            {/* CTA Buttons */}
             <div className="hero-buttons">
               <button className="btn btn-primary">
                 Shop Now <ArrowRight size={18} />
@@ -39,7 +34,6 @@ export function HeroSection() {
               <button className="btn btn-outline">Learn More</button>
             </div>
 
-            {/* Features */}
             <div className="features">
               <div className="feature">
                 <div className="icon"><Truck size={18} /></div>
@@ -65,11 +59,9 @@ export function HeroSection() {
             </div>
           </div>
 
-          {/* Right Content - Hero Image */}
           <div className="hero-right">
             <img src="/src/assets/organic-basket-farm.png" alt="Fresh produce" className="hero-image" />
 
-            {/* Floating Cards */}
             <div className="floating-card top-card">
               <div className="feature">
                 <div className="icon"><Leaf size={18} /></div>
