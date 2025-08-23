@@ -1,4 +1,6 @@
-html, body, #root {
+html,
+body,
+#root {
   margin: 0;
   padding: 0;
   height: 100%;
@@ -9,7 +11,7 @@ html, body, #root {
   background: #0f172a;
   color: #e6eef0;
   width: 100%;
-  padding: 0; 
+  padding: 0;
   box-sizing: border-box;
 }
 
@@ -17,7 +19,7 @@ html, body, #root {
   width: 100%;
   max-width: 1100px;
   margin: 0 auto;
-  padding: 1.25rem 1.25rem; 
+  padding: 1.25rem 1.25rem;
   display: flex;
   gap: 1rem;
   align-items: center;
@@ -49,6 +51,7 @@ html, body, #root {
   text-decoration: none;
   opacity: 0.9;
   font-size: 0.95rem;
+  transition: opacity 0.2s ease;
 }
 .footer-nav a:hover {
   opacity: 1;
@@ -69,17 +72,81 @@ html, body, #root {
   color: inherit;
   font-size: 1rem;
   opacity: 0.95;
+  transition: opacity 0.2s ease;
+}
+.socials a:hover {
+  opacity: 1;
 }
 
-/* responsive */
-@media (max-width: 720px) {
+/* Enhanced mobile responsiveness */
+@media (max-width: 768px) {
+
+  .site-footer{
+    background-color: #56ab2f;
+  }
+  
   .footer-inner {
+    width: 50%;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding: 1rem; 
+    padding: 1.5rem 1rem;
+    gap: 1.25rem;
   }
+
+  .footer-nav {
+    justify-content: center;
+    gap: 1.5rem;
+  }
+
   .footer-meta {
     align-items: center;
+    gap: 0.75rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .footer-inner {
+    padding: 1.25rem 0.75rem;
+  }
+
+  .footer-nav {
+    gap: 1rem;
+  }
+
+  .footer-nav a {
+    font-size: 0.9rem;
+  }
+}
+
+/* Better mobile layout for very small screens */
+@media (max-width: 480px) {
+  .footer-inner {
+    padding: 1rem 0.5rem;
+  }
+
+  .footer-nav {
+    gap: 0.75rem;
+    text-align: center;
+  }
+
+  .footer-brand {
+    gap: 0.5rem;
+  }
+
+  .brand-name {
+    font-size: 0.95rem;
+  }
+
+  .leaf {
+    font-size: 1.1rem;
+  }
+
+  .socials {
+    gap: 1rem;
+  }
+
+  .socials a {
+    font-size: 1.1rem;
   }
 }
