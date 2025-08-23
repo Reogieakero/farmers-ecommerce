@@ -167,33 +167,150 @@
   font-weight: bold;
   color: #22c55e;
 }
+/* ...existing code... */
 
-/* Responsive */
 @media (max-width: 900px) {
+  /* container & spacing */
+  .hero-section {
+    min-height: auto;
+    padding: 20px 14px;
+    overflow: visible;
+  }
+
+  .hero-container {
+    padding: 16px 12px;
+    max-width: 980px;
+    margin: 0 auto;
+  }
+
+  /* one-column layout, text first then image */
   .hero-grid {
     grid-template-columns: 1fr;
+    gap: 28px;
+    align-items: start;
     text-align: center;
   }
 
-  .hero-section{
-    height: 110vh;
-  }
-
-  .features {
-    justify-items: center;
-    display: flex;
-    margin-top: -10px;
-
-  }
-
-  .hero-right{
-    display: none;
-  }
+  /* ensure text portion appears before image */
   .hero-left {
+    order: 1;
+    align-items: center;
+    gap: 18px;
+    padding: 0 6px;
+    width: 100%;
+  }
+  .hero-right {
+    order: 2;
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 6px;
+  }
+
+  /* headings scale fluidly and wrap */
+  .hero-heading h1 {
+    font-size: clamp(28px, 8vw, 44px);
+    line-height: 1.02;
+    margin: 0;
+    word-break: break-word;
+  }
+  .hero-heading h1 span { display: block; font-size: inherit; }
+
+  .hero-heading p {
+    max-width: 680px;
+    margin: 0 auto;
+    font-size: clamp(13px, 3.5vw, 16px);
+    color: #6b7280;
+    line-height: 1.5;
+  }
+
+  /* CTA buttons: stack and center, full width with max width */
+  .hero-buttons {
+    flex-direction: column;
+    width: 100%;
+    max-width: 420px;
+    margin: 0 auto;
+    gap: 12px;
+  }
+  .btn {
+    width: 100%;
+    min-width: 0;
+    padding: 12px 16px;
+    border-radius: 10px;
+    box-sizing: border-box;
+  }
+
+  /* feature list -> single column, left-aligned icon + text */
+  .features {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+    width: 100%;
+    margin-top: 16px;
+    justify-items: start;
+  }
+  .feature {
+    width: 100%;
+    gap: 12px;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .feature .icon { min-width: 36px; height: 36px; display: inline-flex; align-items:center; justify-content:center; }
+
+  /* image: centered and constrained to avoid overflow */
+  .hero-image {
+    width: 100%;
+    max-width: 420px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+  }
+
+  /* floating cards converted into stacked flow to prevent overlap */
+  .floating-card {
+    position: static;
+    width: 100%;
+    background: transparent;
+    border: 0;
+    box-shadow: none;
+    padding: 0;
+    margin-top: 12px;
+    transform: none;
+    display: flex;
+    justify-content: center;
     align-items: center;
   }
-  .features {
-    grid-template-columns: 1fr;
+  .top-card, .bottom-card {
+    top: auto;
+    left: auto;
+    right: auto;
+    bottom: auto;
+  }
+
+  /* hide heavy decorative blur on small screens */
+  .hero-bg .circle { display: none; }
+
+  /* badge smaller and inline so it doesn't overlap heading */
+  .badge {
+    position: relative;
+    display: inline-flex;
+    padding: 6px 12px;
+    font-size: 13px;
   }
 }
 
+/* extra-small phones */
+@media (max-width: 420px) {
+  .hero-section { padding: 14px 10px; }
+  .hero-heading h1 { font-size: clamp(20px, 11vw, 34px); }
+  .hero-heading p { font-size: 14px; padding: 0 6px; }
+  .hero-image { max-width: 360px; }
+  .btn { padding: 12px; font-size: 15px; }
+  .features { gap: 10px; }
+  .badge { font-size: 12px; padding: 6px 10px; }
+}
+
+/* ...existing code... */
