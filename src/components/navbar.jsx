@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./navbar.css";
-import { FaShoppingCart, FaUser } from "react-icons/fa"; 
-import { FaLeaf } from "react-icons/fa"; 
+import { FaShoppingCart, FaUser } from "react-icons/fa";
+import { FaLeaf } from "react-icons/fa";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);

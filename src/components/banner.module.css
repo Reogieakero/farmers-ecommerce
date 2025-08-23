@@ -1,10 +1,10 @@
-.farm-banner {
+.farmBanner {
   background: linear-gradient(90deg, #a8e063 0%, #56ab2f 100%);
   color: #fff;
   padding: 2.5rem 1rem;
 }
 
-.farm-banner-inner {
+.farmBannerInner {
   max-width: 1100px;
   margin: 0 auto;
   display: flex;
@@ -15,30 +15,30 @@
 }
 
 /* Brand */
-.farm-brand {
+.farmBrand {
   display: flex;
   align-items: center;
   gap: 0.75rem;
 }
 
-.farm-leaf {
+.farmLeaf {
   font-size: 2.2rem;
   opacity: 0.95;
 }
 
-.farm-title h1 {
+.farmTitle h1 {
   margin: 0;
   font-size: 1.8rem;
   font-weight: 700;
 }
 
-.farm-sub {
+.farmSub {
   margin: 0.25rem 0 0;
   font-size: 1rem;
   opacity: 0.95;
 }
 
-.farm-cta {
+.farmCta {
   display: flex;
   gap: 0.75rem;
   flex-wrap: wrap;
@@ -53,30 +53,30 @@
   border: 1px solid transparent;
 }
 
-.btn.primary {
+.btnPrimary {
   background: #fff;
   color: #2f7a1a;
 }
 
-.btn.outline {
+.btnOutline {
   background: transparent;
   color: #fff;
   border-color: rgba(255, 255, 255, 0.25);
 }
 
 @media (min-width: 768px) {
-  .farm-banner-inner {
+  .farmBannerInner {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     text-align: left;
   }
 
-  .farm-brand {
+  .farmBrand {
     gap: 1rem;
   }
 
-  .farm-title h1 {
+  .farmTitle h1 {
     font-size: 2.2rem;
   }
 }
